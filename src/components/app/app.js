@@ -97,17 +97,17 @@ class App extends Component {
 
         return (
             <div className="app">
-                <AppInfo employees={employees} increased={increased} />
+                <AppInfo employees={employees} increased={increased}/>
     
                 <div className="search-panel">
-                <SearchPanel onUpdateSearch={this.onUpdateSearch}/>
-                <AppFilter filter={filter} onDilterSelect={this.onFilterSelect}/>
+                    <SearchPanel onUpdateSearch={this.onUpdateSearch}/>
+                    <AppFilter filter={filter} onFilterSelect={this.onFilterSelect}/>
                 </div>
-    
+                
                 <EmployeesList 
                     data={visibleData}
                     onDelete={this.deleteItem}
-                    onToggleProp={this.onToggleProp}/> 
+                    onToggleProp={this.onToggleProp}/>
                 <EmployeesAddForn onAdd={this.addItem}/>
             </div>
         );
